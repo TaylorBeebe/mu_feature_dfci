@@ -696,6 +696,7 @@ DisplayMessageBox (
 
   if ((NULL == pTitle) || (NULL == pCaption) || (NULL == pBody)) {
     DEBUG ((DEBUG_ERROR, "Invalid message parameters. pTitle=%p, pCaption=%p, pBody=%p\n", pTitle, pCaption, pBody));
+    Status = EFI_INVALID_PARAMETER;
   } else {
     Status = DfciUiDisplayMessageBox (
                pTitle,
